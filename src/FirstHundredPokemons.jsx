@@ -21,7 +21,7 @@ const FirstHundredPokemons = () => {
                         <article>
                             <img src = {pokemon.image} alt="image du pokemon" />
                             <p>Name: {pokemon.name}</p>
-                            <p>Type: {pokemon.apiTypes[0].name}</p>
+                            <p>Type: {pokemon.apiTypes[(pokemon.apiTypes.length)-1].name}</p>
                             <p>HP: {pokemon.stats.HP}</p>
                             <p>defense: {pokemon.stats.attack}</p>
                             <p>special attack: {pokemon.stats.defense}</p>
