@@ -1,16 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const FirstHundredPokemons = () => {
 
     const[pokemons, setPokemon] = useState(null);
 
-    fetch("https://pokebuildapi.fr/api/v1/pokemon/limit/100")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-        setPokemon(data)
-    });
+    useEffect (() => {
+        fetch("https://pokebuildapi.fr/api/v1/pokemon/limit/100")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+            setPokemon(data)
+        });
+    }, [])
+    
 
     return (
         <section>

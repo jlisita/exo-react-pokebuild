@@ -1,17 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const PokemonsByType = ({type}) => {
 
     const[pokemons, setPokemon] = useState(null);
 
-    fetch("https://pokebuildapi.fr/api/v1/pokemon/type/" + type)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-        setPokemon(data)
-    });
-
+    useEffect(() => {
+        fetch("https://pokebuildapi.fr/api/v1/pokemon/type/" + type)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+            setPokemon(data)
+        });
+    
+    }, [])
     let title = "pokemons" + type + "-title";
 
     return (

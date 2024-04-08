@@ -1,16 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const AllPokemonTypes = () => {
 
     const[types, setTypes] = useState(null);
 
-    fetch("https://pokebuildapi.fr/api/v1/types")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-        setTypes(data)
-    });
+    useEffect(() => {
+        fetch("https://pokebuildapi.fr/api/v1/types")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+            setTypes(data)
+        });
+    },[])
 
     return (
         <section>
