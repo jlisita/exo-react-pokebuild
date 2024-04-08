@@ -18,7 +18,7 @@ const AllPokemonTypes = () => {
             {!types ? <p>Types en cours de chargement</p> :
             types.map( (element) => {
                 return (
-                    <article>
+                    <article key = {element.id}>
                         <img src={element.image} alt="image du type" />
                         <p>{element.name}</p> 
                     </article>

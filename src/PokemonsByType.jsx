@@ -20,7 +20,7 @@ const PokemonsByType = ({type}) => {
             {   !pokemons ? <p>Pokémons en cours de chargement</p> :
                 pokemons.map((pokemon) => {
                     return (
-                        <article>
+                        <article key = {pokemon.id}>
                             <img src = {pokemon.image} alt="image du pokemon" />
                             <p>Name: {pokemon.name}</p>
                             <p>Type: {pokemon.apiTypes[(pokemon.apiTypes.length)-1].name}</p>
