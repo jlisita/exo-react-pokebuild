@@ -31,7 +31,7 @@ const PokemonsByType = () => {
     return (
         <section>
             <h2>Pokémons par types</h2>
-            <h3>Pokémons eau</h3>
+            <h3 id = "pokemonsWater-title">Pokémons eau</h3>
             {   !pokemonsEau ? <p>Pokémons en cours de chargement</p> :
                 pokemonsEau.map((pokemon) => {
                     return (
@@ -48,7 +48,7 @@ const PokemonsByType = () => {
                         </article>
                  ) })
             }
-            <h3>Pokémons feu</h3>
+            <h3 id = "pokemonsFire-title">Pokémons feu</h3>
             {   !pokemonsFeu ? <p>Pokémons en cours de chargement</p> :
                 pokemonsFeu.map((pokemon) => {
                     return (
@@ -65,7 +65,7 @@ const PokemonsByType = () => {
                         </article>
                  ) })
             }
-            <h3>Pokémons plante</h3>
+            <h3 id = "pokemonsGrass-title">Pokémons plante</h3>
             {   !pokemonsPlante ? <p>Pokémons en cours de chargement</p> :
                 pokemonsPlante.map((pokemon) => {
                     return (

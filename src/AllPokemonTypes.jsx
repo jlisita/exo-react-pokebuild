@@ -14,7 +14,7 @@ const AllPokemonTypes = () => {
 
     return (
         <section>
-            <h2>Les types de pokémons</h2>
+            <h2 id = "allPokemonTypes-title">Les types de pokémons</h2>
             {!types ? <p>Types en cours de chargement</p> :
             types.map( (element) => {
                 return (

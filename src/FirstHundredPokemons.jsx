@@ -14,7 +14,7 @@ const FirstHundredPokemons = () => {
 
     return (
         <section>
-            <h2>Les 100 premiers pokémons</h2>
+            <h2 id = "firstHundredPokemon-title">Les 100 premiers pokémons</h2>
             {   !pokemons ? <p>Pokémons en cours de chargement</p> :
                 pokemons.map((pokemon) => {
                     return (
