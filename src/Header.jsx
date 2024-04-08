@@ -7,7 +7,7 @@ const Header = () => {
             <img src={logo} alt="logo" width = "300"/>
             <nav>
                 <ul>
-                    <li><a href="">100 premier pokémons</a></li>
+                    <li><a href="">100 premiers pokémons</a></li>
                     <li><a href="">Les types</a></li>
                     <li><a href="">Pokémons feu</a></li>
                     <li><a href="">Pokémons eau</a></li>
