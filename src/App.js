@@ -10,7 +10,9 @@ function App() {
       <Header/>
       <FirstHundredPokemons/>
       <AllPokemonTypes/>
-      <PokemonsByType/>
+      <PokemonsByType type = {"Eau"}/>
+      <PokemonsByType type = {"Feu"}/>
+      <PokemonsByType type = {"Plante"}/>
     </div>
   );
 }
