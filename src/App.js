@@ -6,6 +6,7 @@ import PokemonsByType from './PokemonsByType';
 import PokemonsTeam from './PokemonsTeam';
 import PokemonByGeneration from './PokemonByGeneration';
 import SearchPokemon from './SearchPokemon';
+import SelectPokemonsByType from './SelectPokemonByType'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Header/>
       <SearchPokemon/>
+      <SelectPokemonsByType/>
       {/* <FirstHundredPokemons/>
       <AllPokemonTypes/>
       <PokemonsByType type = {"Eau"}/>
@@ -22,6 +24,7 @@ function App() {
       <PokemonByGeneration generation = {"1"}/>
       <PokemonByGeneration generation = {"2"}/>
       <PokemonByGeneration generation = {"3"}/> */}
+  
 
     </div>
   );

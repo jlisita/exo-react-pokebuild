@@ -9,11 +9,14 @@ const SearchPokemon = () => {
         let pokemonName = event.target.pokemonName.value;
     fetch("https://pokebuildapi.fr/api/v1/pokemon/" + pokemonName)
     .then((response) => {
-        return response.json();
-    })
+        if (response.status === 200) {
+          return response.json();
+        } else {
+          return false;
+        }
+      })
     .then((data) => {
         setPokemon(data)
-        console.log(pokemon);
     });
     };
 
@@ -21,12 +24,11 @@ const SearchPokemon = () => {
         <section>
             <h2>Chercher un Pokémon</h2>
             <form action="" onSubmit = {handlePokemonSearch}>
-                {/* <label htmlFor="pokemonName">Saisir le nom d'un pokemon: </label> */}
                 <input type = "text" name = "pokemonName" id = "pokemonName"/>
                 <input type="submit"/>
             </form>
             {      
-             !pokemon ? <p>Pokémon en cours de rechargement</p> :   
+             !pokemon ? <p>Pokémon non trouvé</p> :   
              <article>
                 <img src = {pokemon.image} alt="image du pokemon" />
                 <p>Name: {pokemon.name}</p>
