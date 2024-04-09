@@ -4,6 +4,8 @@ import FirstHundredPokemons from './FirstHundredPokemons';
 import AllPokemonTypes from './AllPokemonTypes';
 import PokemonsByType from './PokemonsByType';
 import PokemonsTeam from './PokemonsTeam';
+import PokemonByGeneration from './PokemonByGeneration';
+
 
 function App() {
   return (
@@ -15,6 +17,9 @@ function App() {
       <PokemonsByType type = {"Feu"}/>
       <PokemonsByType type = {"Plante"}/>
       <PokemonsTeam/>
+      <PokemonByGeneration generation = {"1"}/>
+      <PokemonByGeneration generation = {"2"}/>
+      <PokemonByGeneration generation = {"3"}/>
 
     </div>
   );
