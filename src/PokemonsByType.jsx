@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const PokemonsByType = ({type}) => {
 
-    const[pokemons, setPokemon] = useState(null);
+    const[pokemons, setPokemons] = useState(null);
 
     useEffect(() => {
         fetch("https://pokebuildapi.fr/api/v1/pokemon/type/" + type)
@@ -10,7 +10,7 @@ const PokemonsByType = ({type}) => {
           return response.json();
         })
         .then((data) => {
-            setPokemon(data)
+            setPokemons(data)
         });
     
     }, [])

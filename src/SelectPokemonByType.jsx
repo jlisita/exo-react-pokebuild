@@ -2,24 +2,20 @@ import { useEffect, useState } from 'react';
 
 const SelectPokemonsByType = () => {
 
-    const[pokemons, setPokemon] = useState(null);
+    const[pokemons, setPokemons] = useState(null);
     let type = "";
-    let title = "";
 
     const handleSubmit = (event) => {
 
         event.preventDefault();
-        setPokemon(null)
+        setPokemons(null)
         type = event.target.value;
-        title = "pokemons" + type + "-title";
-        console.log(title);
-        console.log(type);
         fetch("https://pokebuildapi.fr/api/v1/pokemon/type/" + type)
         .then((response) => {
           return response.json();
         })
         .then((data) => {
-            setPokemon(data)
+            setPokemons(data)
         });
 
     };
