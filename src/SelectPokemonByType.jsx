@@ -16,13 +16,12 @@ const SelectPokemonsByType = () => {
 
 
     const[pokemons, setPokemons] = useState(null);
-    let type = "";
 
     const handleSubmit = (event) => {
 
         event.preventDefault();
         setPokemons(null)
-        type = event.target.value;
+        const type = event.target.value;
         fetch("https://pokebuildapi.fr/api/v1/pokemon/type/" + type)
         .then((response) => {
           return response.json();
