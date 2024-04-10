@@ -1,5 +1,5 @@
-import Header from "../Header"
-import SearchPokemon from "../SearchPokemon"
+import Header from "../components/Header"
+import SearchPokemon from "../components/SearchPokemon"
 
 const SearchPokemonPage =()=>{
     return(

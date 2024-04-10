@@ -1,5 +1,5 @@
-import Header from "../Header"
-import SelectPokemonByType from "../SelectPokemonByType"
+import Header from "../components/Header"
+import SelectPokemonByType from "../components/SelectPokemonByType"
 
 const SelectPokemonByTypePage =()=>{
     return(

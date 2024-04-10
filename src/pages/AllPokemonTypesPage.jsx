@@ -1,5 +1,5 @@
-import Header from "../Header"
-import AllPokemonTypes from "../AllPokemonTypes"
+import Header from "../components/Header"
+import AllPokemonTypes from "../components/AllPokemonTypes"
 
 const AllPokemonTypesPage =()=>{
     return(

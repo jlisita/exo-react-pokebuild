@@ -1,5 +1,5 @@
-import Header from "../Header"
-import FirstHundredPokemons from "../FirstHundredPokemons"
+import Header from "../components/Header"
+import FirstHundredPokemons from "../components/FirstHundredPokemons"
 
 const HomePage =()=>{
     return(
