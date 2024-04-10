@@ -41,22 +41,18 @@ nav ul
   justify-content: center;
 }
 
-nav li
-{
-  font-size: 20px; 
-  padding: 0px 20px;
-  border-right:solid 1px white;
-}
-
-nav li:last-child
-{
-  border: none; 
-}
-
 nav a 
 {
   color: white;
+  padding: 0px 20px;
+  font-size: 20px; 
+  border-right:solid 1px white;
   font-weight: 600;
+}
+
+nav a:last-child
+{
+  border: none; 
 }
 
 .App-link {
