@@ -2,6 +2,19 @@ import { useEffect, useState } from 'react';
 
 const SelectPokemonsByType = () => {
 
+    const[types, setTypes] = useState(null);
+    
+    useEffect (() => {
+        fetch("https://pokebuildapi.fr/api/v1/types")
+        .then((response) => {
+        return response.json();
+        })
+        .then((data) => {
+            setTypes(data)
+        });
+    }, [])
+
+
     const[pokemons, setPokemons] = useState(null);
     let type = "";
 
@@ -23,13 +36,18 @@ const SelectPokemonsByType = () => {
     return (
         <section>
             <h2> Selectionner un type de pokémon</h2>
+            {!types ? <p>Types en cours de chargement</p> :
             <form>
                 <select onChange = {handleSubmit} name="type" id="type">
-                    <option value="Feu">Type Feu</option>
-                    <option value="Eau">Type Eau</option>
-                    <option value="Plante">Type Plante</option>
+                    {types.map((type) => {
+                        return (
+                            <option value = {type.name}> {type.name}</option>                  
+                        )
+                    }
+                )}
                 </select>
             </form>
+            }
         
             { !pokemons ? <p>Pokémons en cours de chargement</p> :
                 pokemons.map((pokemon) => {
