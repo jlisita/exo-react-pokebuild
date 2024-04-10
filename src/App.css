@@ -30,7 +30,6 @@
   align-items: center;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
-  background-color: #282c34;
 }
 
 nav ul
@@ -66,4 +65,15 @@ nav a:last-child
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-footer {
+  background-color: #282c34;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
